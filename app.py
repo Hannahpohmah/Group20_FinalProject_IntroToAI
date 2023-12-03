@@ -37,7 +37,7 @@ def predict():
 
     sequence = tokenizer.texts_to_sequences([review])  # Note the conversion to list for the sequence
     sequence = pad_sequences(sequence, maxlen=max_len, padding="pre", truncating="pre")
-    prediction = model.predict(sequence)  # Predict using the loaded model
+    prediction =loaded_model.predict(sequence)  # Predict using the loaded model
     # Assuming your model is binary classification and you want a human-readable result
     result = "Fake" if prediction[0][0] < 0.5 else "Real"
     return render_template('single-product.html', prediction=result, entered_review=review)
