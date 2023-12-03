@@ -12,18 +12,18 @@ If it is computer generated, it is considered fake otherwise not.
 
 - *Data Collection:* Exploring and gathering a diverse dataset of product reviews from various eCommerce platforms.
 - *Preprocessing:* Cleaning and preparing the textual data for analysis and model training.
-- *Model Development:* Building NLP models LSTM, Bidirectional LSTM, pretrained Bert model to classify reviews as fake or real.
+- *Model Development:* Building NLP models LSTM, Bidirectional LSTM, pre trained Bert model to classify reviews as fake or real.
 - *Evaluation:* Assessing model performance using metrics like accuracy, precision, recall, and F1-score.
 - *Deployment:* Deployed using Flask and HTML, hosted on Heroku, enabling users to access the review classification system online.
 - 
 1-BERT (Bidirectional Encoder Representations from Transformers)*
    - Description: Utilized pre-trained transformer-based models for contextual understanding of the reviews.
-   - Performance: loss and accuracy on the test data included 0.4029478132724762, 0.8170974254608154 respectively
+   - Performance: loss and accuracy on the test data included 0.4029478132724762, and 0.8170974254608154 respectively
      
-2. *Bidirectional Model*
+2. *Bidirectional LSTM Model*
    - Description: Leveraged bidirectional architectures to capture context from both directions within the reviews.
-   - Performance: Loss on test data is: 0.2615833282470703
-                  Accuracy on test data: 0.9048939347267151
+   - Performance: Loss on test data is: 0.34073442220687866
+                  Accuracy on test data: 0.8836404085159302
 
 3. *LSTM (Long Short-Term Memory) Model*
    - Description: Employed LSTM architecture to analyze the sequential nature of text data.
@@ -36,13 +36,13 @@ If it is computer generated, it is considered fake otherwise not.
 
 The LSTM model exhibited superior performance metrics in comparison to the BERT and Bidirectional models. Its ability to understand the sequential nature of reviews and capture contextual information contributed to its effectiveness in detecting fake and real product reviews.
 
-Here is the link to my google collab file hosting the different models: https://colab.research.google.com/drive/1p6AQcHkqvX9_ueYYIvAHxtxulngFmC4u?usp=sharing 
+Here is the link to my Google Collab file hosting the different models: https://colab.research.google.com/drive/1p6AQcHkqvX9_ueYYIvAHxtxulngFmC4u?usp=sharing 
 
 ## Deployment Details
 
-This project has been deployed on Heroku, utilizing Flask for the backend and HTML for the frontend. Users can access the deployed application through the following link: https://hlstmtestapp-bf3cba8a0a69.herokuapp.com/
+This project has been deployed on Heroku, utilizing Flask for the backend and HTML for the front end. Users can access the deployed application through the following link: https://hlstmtestapp-bf3cba8a0a69.herokuapp.com/
 
-Watch a video to see how it works??? https://youtu.be/_KwUGj8VNYI
+Watch a video to see how it works. https://youtu.be/_KwUGj8VNYI
 
 ## Technologies Used
 
@@ -54,4 +54,24 @@ Watch a video to see how it works??? https://youtu.be/_KwUGj8VNYI
 - HTML/CSS (for the frontend)
 - Heroku (for deployment)
 
-  # Structure of files 
+
+  # Project File Structure
+- **app.py**: Python file containing the Flask application code.
+- **model_architecture.json**: JSON file storing the architecture of the trained model.
+- **model_weights.h5**: File containing the weights of the trained model.
+- **tokenizer.pkl**: Pickle file storing the tokenizer used in text preprocessing.
+- **requirements.txt**: Text file listing the Python dependencies and their versions.
+- **Procfile**: Configuration file for Heroku deployment.
+- **README.md**: This file providing information about the project.
+- **static/**: Directory containing static files such as images, stylesheets, and JavaScript.
+  - **images/**: Directory containing image files used in the application.
+  - **styles/**: Directory containing CSS or SASS files for styling.
+- **templates/**: Directory containing HTML templates used by the Flask application.
+  - **index.html**: Homepage HTML template.
+  - **single-product.html**: HTML template for displaying a single product.
+ 
+
+## Usage
+- **Running the Application**: To run the Flask application, execute `python app.py` in the terminal.
+- **Dependencies Installation**: Install the required dependencies using `pip install -r requirements.txt`.
+
