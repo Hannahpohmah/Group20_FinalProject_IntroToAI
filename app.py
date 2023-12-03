@@ -12,13 +12,9 @@ max_len = 193
 
 application = Flask(__name__) #Initialize the flask App
 # Load your trained model architecture
-bucket_name = 'mylstmmodelbucket'
-s3 = boto3.client('s3')  # Initialize S3 client
-
-# Download model architecture and weights from S3
-# Download individual files from S3
-s3.download_file(bucket_name, 'tokenizer.pkl', 'tokenizer.pkl')
-
+with open('tokenizer.pkl', 'rb') as f:
+    tokenizer = pickle.load(f)
+    
 with open('model_architecture.json', 'r') as json_file:
     loaded_model_json = json_file.read()
 
