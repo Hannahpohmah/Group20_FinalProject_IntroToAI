@@ -53,3 +53,5 @@ Watch a video to see how it works??? https://youtu.be/_KwUGj8VNYI
 - Flask (for building the API and backend)
 - HTML/CSS (for the frontend)
 - Heroku (for deployment)
+
+  # Structure of files 
