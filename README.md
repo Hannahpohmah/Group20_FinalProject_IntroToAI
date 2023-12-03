@@ -36,6 +36,8 @@ If it is computer generated, it is considered fake otherwise not.
 
 The LSTM model exhibited superior performance metrics in comparison to the BERT and Bidirectional models. Its ability to understand the sequential nature of reviews and capture contextual information contributed to its effectiveness in detecting fake and real product reviews.
 
+Here is the link to my google collab file hosting the different models: https://colab.research.google.com/drive/1p6AQcHkqvX9_ueYYIvAHxtxulngFmC4u?usp=sharing 
+
 ## Deployment Details
 
 This project has been deployed on Heroku, utilizing Flask for the backend and HTML for the frontend. Users can access the deployed application through the following link: https://hlstmtestapp-bf3cba8a0a69.herokuapp.com/
