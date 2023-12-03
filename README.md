@@ -40,6 +40,8 @@ The LSTM model exhibited superior performance metrics in comparison to the BERT 
 
 This project has been deployed on Heroku, utilizing Flask for the backend and HTML for the frontend. Users can access the deployed application through the following link: https://hlstmtestapp-bf3cba8a0a69.herokuapp.com/
 
+Watch a video to see how it works??? https://youtu.be/_KwUGj8VNYI
+
 ## Technologies Used
 
 - Python
