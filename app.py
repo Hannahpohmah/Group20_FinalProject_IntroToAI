@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 from keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
+from tensorflow.keras.models import model_from_json
 
 # Load the tokenizer from the saved file
 
