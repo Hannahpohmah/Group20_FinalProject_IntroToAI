@@ -1,5 +1,8 @@
 # Fake/Real Product Review Detection
 
+# Problem statement
+In the digital age of e-commerce, fake product reviews have become a widespread issue, impacting consumers and businesses. The problem lies in the prevalence of fraudulent reviews, both overly positive and excessively negative, distorting the authenticity of user-generated content and eroding trust in online marketplaces
+
 ## Overview
 
 This project aims to develop a system that detects fake and real product reviews on eCommerce websites. Leveraging machine learning and natural language processing techniques, the goal is to create a model that can classify reviews accurately, helping users make informed decisions while shopping online.
