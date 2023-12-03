@@ -17,15 +17,16 @@ s3 = boto3.client('s3')  # Initialize S3 client
 
 # Download model architecture and weights from S3
 # Download individual files from S3
-loaded_model_json= s3.download_file(bucket_name, 'model_architecture.json', 'model_architecture.json')
-s3.download_file(bucket_name, 'model_weights.h5', 'model_weights.h5')
 s3.download_file(bucket_name, 'tokenizer.pkl', 'tokenizer.pkl')
-s3.download_file(bucket_name, 'single-product.html', 'single-product.html')
 
+with open('model_architecture.json', 'r') as json_file:
+    loaded_model_json = json_file.read()
 
-# Load the model architecture and weights
-model = model_from_json(loaded_model_json)
-model.load_weights("model_weights.h5")
+# Load the model from JSON
+loaded_model = model_from_json(loaded_model_json)
+
+# Load the model weights
+loaded_model.load_weights("model_weights.h5")
 
 @application.route('/')
 def home():
